@@ -15,7 +15,7 @@ def train(fileLocation):
     with open(fileLocation, "r+") as file:
         datasets = file.read().splitlines()
         for set in datasets:
-            set = set.split(",")
+            set = set.split("11")
             set = [ int(e) for e in set ]
             for i in range(len(set) - input_length - 1):
                 train["x"].append(set[i : i + input_length])
